@@ -27,7 +27,7 @@ const Home = () => {
         <h1 class="d-flex justify-content-center dln-title-h1">Bienvenue sur Contact Book</h1>
         <input class="form-control mr-sm-2 w-50 mt-5 mb-5 dln-border-radius" type="search" placeholder="Entrer le nom d'utilisateur (ne fonctionne pas)" aria-label="Search" />
         <Link className="btn text-white dln-icon-user" to="/users/add">
-            <FontAwesomeIcon icon={faUser} />
+            <FontAwesomeIcon icon={faUser} />  Ajouter un utilisateur
         </Link>
         <table class="table border table-responsive">
           <thead class="thead-dark">
