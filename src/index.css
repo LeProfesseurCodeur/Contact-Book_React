@@ -1,5 +1,18 @@
+.App {
+  background-color: #1C1E3D;
+}
+
+.dln-title-h1 {
+  color: #fff
+}
+
+.dln-th {
+  color: white;
+}
+
 .dln {
   transform: translateY(35%);
+  color: white
 }
 
 .error404 {
@@ -10,4 +23,28 @@
 .dln-user-info {
   margin-left: auto;
   margin-right: auto;
+}
+
+.form-control {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dln-border-radius {
+  border-radius: 20px !important;
+  float: left;
+}
+
+.dln-btn-add {
+  display: flex;
+  justify-content: center;
+}
+
+.dln-btn-blue {
+  margin-right: 1%;
+}
+
+.dln-icon-user {
+  margin-top: 45px;
+  float: right;
 }

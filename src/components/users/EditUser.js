@@ -10,8 +10,8 @@ const EditUser = () => {
         username: "",
         email: "",
         phone: "",
-        website: "",
         birthday: "",
+        website: "",
     });
 
     const { name, username, email, phone, website, birthday } = user;
@@ -36,7 +36,7 @@ const EditUser = () => {
     return (
         <div className="container">
             <div className="w-75 mx-auto shadow p-5">
-                <h2 className="text-center mb-4">Mettre à jour mon profile</h2>
+                <h2 className="text-center mb-4 dln-title-h1">Mettre à jour mon profile</h2>
                 <form onSubmit={e => onSubmit(e)}>
                     <div className="form-group mb-3">
                         <input
@@ -82,9 +82,9 @@ const EditUser = () => {
                         <input
                             type="text"
                             className="form-control form-control-lg"
-                            placeholder="Entrer votre site web"
-                            name="website"
-                            value={website}
+                            placeholder="Entrer votre date d'anniversaire (JJ/MM/AAAA)"
+                            name="birthday"
+                            value={birthday}
                             onChange={e => onInputChange(e)}
                         />
                     </div>
@@ -92,9 +92,9 @@ const EditUser = () => {
                         <input
                             type="text"
                             className="form-control form-control-lg"
-                            placeholder="Entrer votre date d'anniversaire (JJ/MM/AAAA)"
-                            name="birthday"
-                            value={birthday}
+                            placeholder="Entrer votre site web"
+                            name="website"
+                            value={website}
                             onChange={e => onInputChange(e)}
                         />
                     </div>

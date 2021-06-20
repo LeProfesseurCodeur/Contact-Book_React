@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
 const AddUser = () => {
@@ -9,8 +9,8 @@ const AddUser = () => {
         username: "",
         email: "",  
         phone: "",
-        website: "",
         birthday: "",
+        website: "",
     });
 
     const { name, username, email, phone, website, birthday } = user;
@@ -25,9 +25,9 @@ const AddUser = () => {
     };
     return (
         <div className="container">
-            <div className="w-75 mx-auto shadow p-5">
-                <h2 className="text-center mb-4">Ajouter un utilisateur</h2>
-                <form onSubmit={e => onSubmit(e)}>
+            <div className="w-50 mx-auto shadow pt-5">
+                <h2 className="text-center mb-4 dln-title-h1">Ajouter un utilisateur</h2>
+                <form onSubmit={e => onSubmit(e)} class="mt-5">
                     <div className="form-group mb-3">
                         <input
                             type="text"
@@ -70,6 +70,15 @@ const AddUser = () => {
                     </div>
                     <div className="form-group mb-3">
                         <input
+                            type="date"
+                            className="form-control form-control-lg"
+                            name="birthday"
+                            value={birthday}
+                            onChange={e => onInputChange(e)}
+                        />
+                    </div>
+                    <div className="form-group mb-3">
+                        <input
                             type="text"
                             className="form-control form-control-lg"
                             placeholder="Entrer votre site internet"
@@ -78,18 +87,10 @@ const AddUser = () => {
                             onChange={e => onInputChange(e)}
                         />
                     </div>
-                    <div className="form-group mb-3">
-                        <input
-                            type="text"
-                            className="form-control form-control-lg"
-                            placeholder="Entrer votre date d'anniversaire (JJ/MM/AAAA)"
-                            name="birthday"
-                            value={birthday}
-                            onChange={e => onInputChange(e)}
-                        />
+                    <div className="dln-btn-add">
+                        <button className="btn btn-primary btn-block dln-btn-blue mt-5 mb-5">Ajouter un utilisateur</button>
+                        <a href="/" className="btn btn-danger btn-block mt-5 mb-5">Annuler</a>
                     </div>
-                    <button className="btn btn-primary btn-block">Ajouter un utilisateur</button>
-                    <a href="/" className="btn btn-danger btn-block">Annuler</a>
                 </form>
             </div>
         </div>
